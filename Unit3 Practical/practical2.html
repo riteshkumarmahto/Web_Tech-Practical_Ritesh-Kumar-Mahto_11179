@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conditions and Loops</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+        }
+
+        #output {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Conditional Statements & Loops</h2>
+
+    <button onclick="checkNumber()">If-Else</button>
+    <button onclick="forLoop()">For Loop</button>
+    <button onclick="whileLoop()">While Loop</button>
+    <button onclick="doWhileLoop()">Do-While Loop</button>
+
+    <div id="output"></div>
+
+    <script>
+        function checkNumber() {
+            let n = 5;
+
+            if (n % 2 === 0) {
+                output.innerHTML = n + " is Even (if-else)";
+            } else {
+                output.innerHTML = n + " is Odd (if-else)";
+            }
+        }
+
+        function forLoop() {
+            let text = "For Loop: ";
+            for (let i = 1; i <= 5; i++) {
+                text += i + " ";
+            }
+            output.innerHTML = text;
+        }
+
+        function whileLoop() {
+            let i = 1;
+            let text = "While Loop: ";
+            while (i <= 5) {
+                text += i + " ";
+                i++;
+            }
+            output.innerHTML = text;
+        }
+
+        function doWhileLoop() {
+            let i = 1;
+            let text = "Do-While Loop: ";
+            do {
+                text += i + " ";
+                i++;
+            } while (i <= 5);
+            output.innerHTML = text;
+        }
+    </script>
+
+</body>
+</html>

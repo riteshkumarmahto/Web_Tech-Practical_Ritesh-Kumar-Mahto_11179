@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions and Scope</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 10px;
+        }
+
+        #output {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Functions & Scope</h2>
+
+    <button onclick="showVar()">Var Scope</button>
+    <button onclick="showLet()">Let Scope</button>
+    <button onclick="showConst()">Const Scope</button>
+
+    <div id="output"></div>
+
+    <script>
+        /* User-defined function using var */
+        function showVar() {
+            if (true) {
+                var x = 10;
+            }
+            output.innerHTML = "var value = " + x + " (function scope)";
+        }
+
+        /* User-defined function using let */
+        function showLet() {
+            if (true) {
+                let y = 20;
+                output.innerHTML = "let value = " + y + " (block scope)";
+            }
+        }
+
+        /* User-defined function using const */
+        function showConst() {
+            const z = 30;
+            output.innerHTML = "const value = " + z + " (cannot be changed)";
+        }
+    hookup
+    </script>
+
+</body>
+</html>
