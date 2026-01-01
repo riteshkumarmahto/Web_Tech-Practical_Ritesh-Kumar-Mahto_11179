@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Example</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Listener Demo</h2>
+
+    <div id="box">Click Me</div>
+    <br>
+
+    <button onclick="removeEvent()">Remove Click Event</button>
+
+    <script>
+        let box = document.getElementById("box");
+
+        function changeText() {
+            box.innerHTML = "Box Clicked!";
+            box.style.backgroundColor = "lightgreen";
+        }
+
+        // Add event listener
+        box.addEventListener("click", changeText);
+
+        // Remove event listener
+        function removeEvent() {
+            box.removeEventListener("click", changeText);
+            box.innerHTML = "Event Removed";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create and Manipulate Elements</title>
+    <style>
+        ul {
+            width: 200px;
+        }
+        li {
+            background-color: lightyellow;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>DOM Element Creation Example</h2>
+
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Remove Item</button>
+
+    <ul id="list">
+        <li>Item 1</li>
+    </ul>
+
+    <script>
+        function addItem() {
+            let li = document.createElement("li");
+            li.innerHTML = "New Item";
+            document.getElementById("list").appendChild(li);
+        }
+
+        function removeItem() {
+            let list = document.getElementById("list");
+            if (list.lastChild) {
+                list.removeChild(list.lastChild);
+            }
+        }
+    </script>
+
+</body>
+</html>
